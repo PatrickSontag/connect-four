@@ -1,9 +1,29 @@
+body {
+  background-color: lightgrey;
+}
+
 /* game board table */
 
 #board td {
   width: 50px;
   height: 50px;
-  border: solid 1px #666;
+  /* border: dashed 1px #666; */
+  /* background-color: rgb(219, 219, 219); */
+}
+
+#board {
+  margin: auto;
+  border: 8px solid rgb(243, 243, 243);
+  border-radius: 35px;
+  margin-top: 3em;
+  background-color: rgb(189, 189, 189);
+}
+
+#name {
+  text-align: center;
+  color: rgb(85, 195, 199);
+  font-family: 'Fredoka', sans-serif;
+  font-size: 55px;
 }
 
 /* pieces are div within game table cells: draw as colored circles */
@@ -11,8 +31,8 @@
 .piece {
   /* TODO: make into circles */
   margin: 2.5%;
-  width: 95%;
-  height: 95%;
+  width: 90%;
+  height: 90%;
   border-radius: 95%;
 }
 
@@ -21,18 +41,25 @@
 /* column-top is table row of clickable areas for each column */
 
 #column-top td {
-  border: dashed 1px lightgray;
+  border-radius: 95%;
+  border: dashed 1px rgb(243, 243, 243);
 }
 
-#column-top td:hover {
-  background-color: gold;
+#column-top.player1 td:hover {
+  background-color: rgba(134, 171, 252, 0.4);
+}
+
+#column-top.player2 td:hover {
+  background-color: rgba(105, 247, 252, 0.4);
 }
 
 .player1 div{
 
-  background-color: red;
+  background-color: rgb(134, 171, 252);
+  border: solid 5px rgb(117, 151, 223);
 }
 
 .player2 div{
-  background-color: blue;
+  background-color: rgb(105, 247, 252);
+  border: solid 5px rgb(85, 195, 199);
 }
